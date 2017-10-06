@@ -62,7 +62,7 @@ class HangpersonApp < Sinatra::Base
   
   get '/win' do
     if @game.check_win_or_lose != :win
-      erb :show
+      redirect '/show'
     else
       erb :win # You may change/remove this line
     end
@@ -70,7 +70,7 @@ class HangpersonApp < Sinatra::Base
   
   get '/lose' do
     if @game.check_win_or_lose != :lose
-      erb :show
+      redirect '/show'
     else
       erb :lose # You may change/remove this line
     end
